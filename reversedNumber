@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Bir eded daxil edin: ");
+        int  eded = Convert.ToInt32(Console.ReadLine());
+
+        int tersEded = 0;
+        while (eded > 0)
+        {
+            int sonReqem = eded % 10; 
+            tersEded = tersEded * 10 + sonReqem; 
+            eded /= 10; 
+        }
+
+        Console.WriteLine("Ters çevrilmiş eded: " + tersEded);
+    }
+}
+
