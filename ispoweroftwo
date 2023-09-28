@@ -1,0 +1,38 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ədədi daxil edin: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+
+        bool isPowerOfTwo = true;
+
+        if (num <= 0)
+        {
+            isPowerOfTwo = false;
+        }
+        else
+        {
+            while (num > 1)
+            {
+                if (num % 2 != 0)
+                {
+                    isPowerOfTwo = false;
+                    break;
+                }
+                num /= 2;
+            }
+        }
+
+        if (isPowerOfTwo)
+        {
+            Console.WriteLine("Bu ədəd 2'nin  qüvvətidir.");
+        }
+        else
+        {
+            Console.WriteLine("Bu ədəd 2'nin bir qüvvəti deyil.");
+        }
+    }
+}
